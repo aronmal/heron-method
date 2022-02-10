@@ -1,0 +1,6 @@
+/home/aronmal/Documents/Github/Heron/Heron/obj/Debug/Heron.csprojAssemblyReference.cache
+/home/aronmal/Documents/Github/Heron/Heron/obj/Debug/Heron.csproj.CoreCompileInputs.cache
+/home/aronmal/Documents/Github/Heron/Heron/bin/Debug/Heron.exe
+/home/aronmal/Documents/Github/Heron/Heron/bin/Debug/Heron.pdb
+/home/aronmal/Documents/Github/Heron/Heron/obj/Debug/Heron.exe
+/home/aronmal/Documents/Github/Heron/Heron/obj/Debug/Heron.pdb
