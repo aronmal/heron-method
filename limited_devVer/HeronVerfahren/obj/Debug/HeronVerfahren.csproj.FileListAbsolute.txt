@@ -1,8 +1,0 @@
-/home/limiteddev/Documents/Code/HeronVerfahren/HeronVerfahren/bin/Debug/HeronVerfahren.exe
-/home/limiteddev/Documents/Code/HeronVerfahren/HeronVerfahren/bin/Debug/HeronVerfahren.pdb
-/home/limiteddev/Documents/Code/HeronVerfahren/HeronVerfahren/bin/Debug/ELib.dll
-/home/limiteddev/Documents/Code/HeronVerfahren/HeronVerfahren/obj/Debug/HeronVerfahren.csproj.AssemblyReference.cache
-/home/limiteddev/Documents/Code/HeronVerfahren/HeronVerfahren/obj/Debug/HeronVerfahren.csproj.CoreCompileInputs.cache
-/home/limiteddev/Documents/Code/HeronVerfahren/HeronVerfahren/obj/Debug/HeronVerfahren.csproj.CopyComplete
-/home/limiteddev/Documents/Code/HeronVerfahren/HeronVerfahren/obj/Debug/HeronVerfahren.exe
-/home/limiteddev/Documents/Code/HeronVerfahren/HeronVerfahren/obj/Debug/HeronVerfahren.pdb
