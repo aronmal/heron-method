@@ -7,6 +7,13 @@ namespace Heron
         public static void Main()
         {
             Console.WriteLine("Dieses Programm verwendet das Heron-Verfahren um die 2. Wurzel eines Radianten zu lösen.");
+            do
+            {
+                Run();
+            } while (AskUserIfYesOrNo("Rerun?"));
+        }
+        private static void Run()
+        {
             Console.WriteLine("- - - - -");
             Console.WriteLine("");
             // input = ELib.getLong("Input a number <Input>");
@@ -17,6 +24,7 @@ namespace Heron
             var exponent = int.Parse(Console.ReadLine());
             Console.Write("Genauigkeit an Nachkommastellen: ");
             var precision = Math.Pow(10, -1 * int.Parse(Console.ReadLine()));
+            Console.WriteLine(precision);
             Console.WriteLine("- - - - -");
             double x = radiant;
             double y = 1;
@@ -43,6 +51,44 @@ namespace Heron
             }
             num = num2 - num1;
             return num <= range;
+        }
+        private static bool AskUserIfYesOrNo(string question)
+        {
+            string[] allowedInput = { "Y", "N", "Yes", "No", "Ja", "Nein", "J", "n", "j", "y", "ja", "nein", "yes", "no" };
+            string[] yesInput = { "Y", "Yes", "Ja", "J", "j", "y", "ja", "yes" };
+            Console.Write($"\n{question} [Y/N]: ");
+            var key = Console.ReadLine();
+            Console.WriteLine("");
+            // ReSharper disable once IdentifierTypo
+            bool iscorrect = false;
+            while (!iscorrect)
+            {
+                foreach (var allowed in allowedInput)
+                {
+                    if (key == allowed)
+                    {
+                        iscorrect = true;
+                        break;
+                    }
+                }
+
+                if (!iscorrect)
+                {
+                    // ReSharper disable StringLiteralTypo //what do you mean?? its German >:(
+                    Console.Write($"Bitte benutzte nur [Y/N] | Please use [Y/N] \n{question} [Y/N]: ");
+                    // ReSharper restore StringLiteralTypo
+                    key = Console.ReadLine();
+                    Console.WriteLine("");
+                }
+            }
+            foreach (var yes in yesInput)
+            {
+                if (key == yes)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }
