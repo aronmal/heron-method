@@ -23,8 +23,13 @@ namespace Heron
             Console.Write("Wie vielte Wurzel?: ");
             var exponent = int.Parse(Console.ReadLine());
             Console.Write("Genauigkeit an Nachkommastellen: ");
-            var precision = Math.Pow(10, -1 * int.Parse(Console.ReadLine()));
-            Console.WriteLine(precision);
+            var precision = int.Parse(Console.ReadLine());
+            if (precision > 15)
+            {
+                precision = 15;
+                Console.WriteLine("- - - - -");
+                Console.WriteLine("Achtung: Genauigkeit wurde auf das Maximum (15) gesetzt.");   
+            }
             Console.WriteLine("- - - - -");
             double x = radiant;
             double y = 1;
@@ -33,7 +38,7 @@ namespace Heron
             {
                 Console.WriteLine("Round " + index + ":");
                 index++;
-                Console.WriteLine(" | " + Math.Round(x, 5) + " | " + Math.Round(y, 5) + " | ");
+                Console.WriteLine(" | " + x + " | " + y + " | ");
                 x = ((x * (exponent - 1)) + y) / exponent;
                 y = radiant / Math.Pow(x, exponent - 1);
             }
@@ -41,16 +46,16 @@ namespace Heron
             Console.WriteLine("Final Result:");
             Console.WriteLine(" | " + x + " | " + y + " | ");
         }
-        private static bool IsInRange(double num1, double num2, double range)
+        private static bool IsInRange(double num1, double num2, int precision)
         {
             double num;
             if (num1 > num2)
             {
                 num = num1 - num2;
-                return num <= range;
+                return Math.Pow(10, precision) * num <= 1;
             }
             num = num2 - num1;
-            return num <= range;
+            return Math.Pow(10, precision) * num <= 1;
         }
         private static bool AskUserIfYesOrNo(string question)
         {
